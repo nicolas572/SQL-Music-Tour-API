@@ -50,7 +50,10 @@ events.get('/:name', async (req, res) => {
                 },
                 {
                     model: Stage,
-                    as: "stages"
+                    as: "stages",
+                    through: {
+                        attributes: []
+                    }
                 }
             ]
         })
